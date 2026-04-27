@@ -109,6 +109,11 @@ const ContactSection = () => {
             href={`mailto:${EMAIL}`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              window.location.href = `mailto:${EMAIL}`;
+            }}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -117,20 +122,25 @@ const ContactSection = () => {
               color: 'var(--bg-cream)',
               textDecoration: 'none',
               padding: '22px 44px',
-              clipPath: 'polygon(0 0, 100% 0, 100% 70%, 94% 100%, 0 100%)',
               cursor: 'pointer',
               flexShrink: 0,
+              position: 'relative',
+              zIndex: 100000,
+              pointerEvents: 'auto',
+              clipPath: 'polygon(0 0, 100% 0, 100% 70%, 94% 100%, 0 100%)',
             }}
           >
             <span className="monolith" style={{
               fontSize: '0.82rem',
               letterSpacing: '0.18em',
               fontWeight: 700,
+              pointerEvents: 'none',
             }}>
               DROP ME A LINE
             </span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2.5" strokeLinecap="square">
+              stroke="currentColor" strokeWidth="2.5" strokeLinecap="square"
+              style={{ pointerEvents: 'none' }}>
               <line x1="5" y1="19" x2="19" y2="5" />
               <polyline points="5 5 19 5 19 19" />
             </svg>

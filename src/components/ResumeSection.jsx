@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import animeshPhoto from '../assets/animesh Upscaled.png';
 
 const ResumeSection = () => {
   const fadeInUp = {
@@ -53,14 +54,13 @@ const ResumeSection = () => {
             borderRadius: '10px'
           }}>
             <motion.img 
-              src="/src/assets/animesh Upscaled.png" 
+              src={animeshPhoto} 
               alt="Animesh Kumar"
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                filter: 'grayscale(1) contrast(1.1)',
-                mixBlendMode: 'multiply'
+                borderRadius: '10px'
               }}
               whileHover={{ scale: 1.05, transition: { duration: 0.4 } }}
             />
@@ -169,7 +169,7 @@ const ResumeSection = () => {
               {['figma', 'python', 'html5', 'css3', 'cplusplus', 'amazonwebservices'].map((icon, i) => (
                 <motion.img 
                   key={icon} 
-                  src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} 
+                  src={icon === 'amazonwebservices' ? 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' : `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-original.svg`} 
                   style={{ width: '40px', height: '40px' }} 
                   alt={icon} 
                   whileHover={{ y: -5, scale: 1.1 }}
