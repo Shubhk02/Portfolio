@@ -7,9 +7,9 @@ const projects = [
     panelColor: '#d2042d',
     textColor: '#111212',
     date: 'Mar 2024',
-    title: 'JA Assure',
-    tagline: 'Designing clarity into a complex insurance landscape for data-driven decisions.',
-    tags: ['Mobile UI', 'Dashboard Design'],
+    title: 'MacroForge',
+    tagline: 'Turn hassle into seamless key mapping with Macro Forge—where powerful customization feels simple and easy to use.',
+    tags: ['Software Design', 'Dashboard Design',''],
     imgUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
   },
   {
